@@ -11,12 +11,12 @@ El parche de esta vulnerabilidad consiste en modificar de la expresión regular 
 
 						--Expresión .htaccess original:--
 
-# Enable rewrite engine and route requests to framework
+Enable rewrite engine and route requests to framework
 RewriteEngine On
 
-# Some servers require you to specify the `RewriteBase` directive
-# In such cases, it should be the path (relative to the document root)
-# containing this .htaccess file
+Some servers require you to specify the `RewriteBase` directive
+In such cases, it should be the path (relative to the document root)
+containing this .htaccess file
 
 RewriteRule ^(lib|tmp)\/|\.(ini|php)$ - [R=404]
 
@@ -28,12 +28,12 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
 
 						--Expresión .htaccess modificada--
 
-# Enable rewrite engine and route requests to framework
+Enable rewrite engine and route requests to framework
 RewriteEngine On
 
-# Some servers require you to specify the `RewriteBase` directive
-# In such cases, it should be the path (relative to the document root)
-# containing this .htaccess file
+Some servers require you to specify the `RewriteBase` directive
+In such cases, it should be the path (relative to the document root)
+containing this .htaccess file
 
 RewriteRule ^(lib|tmp)\/|\.(ini|php|json)$ - [R=404]
 
